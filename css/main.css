@@ -227,7 +227,7 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(11),
-    caret 1s steps(1) infinite;
+    caret 2s steps(1) infinite;
 }
 
 @media (max-width: 575.98px) {
