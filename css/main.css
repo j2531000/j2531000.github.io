@@ -190,7 +190,45 @@ a:hover {
     color: #cec8c8;
     background-color: #f8f9fa;
 }
+.profile-banner {
+    background-image: url(../images/banner6.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    /* background-position: 50% 50%; */
+    background-attachment: fixed;
+    /*margin-top: 7%;*/
+    height:450px;
+}
+.dark-mask {
+    background: rgba(0,0,0,0.3);
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: #fff;
+    z-index: 999;
+}
+.profile-photo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
 
+@keyframes typing {
+  from { width: 0 }
+}
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+.profile-name {
+  width: 28rem;
+  border-right: .05em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(11),
+    caret 1s steps(1) infinite;
+}
 
 @media (max-width: 575.98px) {
 	.navbar-brand img{
