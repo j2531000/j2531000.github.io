@@ -230,6 +230,165 @@ a:hover {
     caret 2s steps(1) infinite;
 }
 
+.progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 12px;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: #e9ecef;
+    border-radius: 0.5rem;
+}
+@keyframes width {
+  0% {
+    width: 0;
+  }
+}
+.progress-bar{
+    animation-duration: 3s;
+    animation-name: width;
+}
+.grid-gallery {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.grid-gallery a{
+    text-decoration:none;
+}
+.gutter .grid-gallery ul {
+    margin-left: -14px;
+}
+/*.grid-gallery ul {
+    margin-left: 1px;
+}*/
+.grid-gallery ul {
+    list-style: none;
+    padding: 0;
+}
+.grid {
+    margin: 0 auto;
+}
+.gutter .grid li {
+    padding: 0 0 14px 14px;
+}
+.work-3col .grid li {
+    float: left;
+    width: 33.33%;
+}
+.grid li {
+    box-sizing: border-box;
+    float: left;
+    margin: 0;
+    width: 25%;
+    display: inline-table;
+}
+.grid li {
+    transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    -o-transition-duration: 0s;
+}
+.grid figure {
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+.grid-gallery figure {
+    margin: 0;
+    position: relative;
+}
+.gallery-img {
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+    overflow: hidden;
+    border-radius:.25rem;
+}
+.gallery-img a {
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+.grid-gallery figure img {
+    display: block;
+    width: 100%;
+    opacity: 1;
+    cursor: pointer;
+}
+.grid img {
+    width: 100%;
+}
+.work-with-title figure:hover img {
+    -ms-transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    opacity: 0.8;
+    cursor: url(../images/icon-zoom-white.png), pointer;
+}
+figure:hover img {
+    -ms-transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    opacity: 0.15;
+    cursor: url(../images/icon-zoom-white.png), pointer;
+}
+.grid figure:hover figcaption {
+    opacity: 1;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+}
+.work-3col .grid figcaption {
+    bottom: 35px;
+}
+.work-with-title .grid figcaption {
+    opacity: 1;
+    position: relative;
+    bottom: 0;
+    padding: 40px 0 30px 0;
+    background: rgba(255,255,255,1);
+    z-index: 2;
+}
+.grid figcaption {
+    bottom: 70px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+}
+ .grid-gallery figcaption h3 a, .grid-gallery figcaption h3 {
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #fff;
+}
+.grid-gallery figcaption h3 {
+    margin: 0 0 8px;
+    padding: 0;
+    /*text-transform: uppercase;*/
+    font-size:18px;
+}
+.grid-gallery figcaption p {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #aeaeae;
+    margin-bottom: 0;
+}
+.grid figure:hover .gallery-img {
+    background-color: #000;
+}
+
 @media (max-width: 575.98px) {
 	.navbar-brand img{
 	width: 180px;
