@@ -25,6 +25,11 @@
   <style>
   @import 'https://fonts.googleapis.com/css?family=Roboto:400,100,900';
   </style>
+  <style type="text/css">
+    .mySlides, .mySlides2 {display:none;}
+
+    /*.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:1}50%{opacity:0}100%{opacity:1}}*/
+  </style>
   
 </head>
 <body>
@@ -143,41 +148,68 @@
         <div class="col-md-12 mt-5 work-3col gutter">
           <div class="grid-gallery overflow-hidden" >
             <div class="tab-content d-flex flex-wrap justify-content-center">
-              <div class="col-md-4 mb-3">
+              <div class="col-md-5 mb-3">
                 <figure>
-                  <div class="gallery-img"><a href="https://j2531000.github.io/images/gallery16.jpg" title="" target="_blank"><img class="rounded" src="images/gallery16.jpg" alt=""></a></div>
+                  <div class="gallery-img">
+                    <a href="https://j2531000.github.io/images/gallery18.jpg" title="" target="_blank">
+                      <img class="rounded mySlides w3-animate-fading" src="images/gallery20-2.jpg" alt="">
+                      <img class="rounded mySlides w3-animate-fading" src="images/gallery20.jpg" alt="">
+                      <img class="rounded mySlides w3-animate-fading" src="images/gallery20-3.jpg" alt="">
+                      <img class="rounded mySlides w3-animate-fading" src="images/gallery20-4.jpg" alt="">
+                    </a>
+                  </div>
                 </figure>
               </div>
+              <div class="col-md-7">
+                <h4>FRNCi</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 
-              <div class="col-md-4 mb-3">
+              </div>
+              <div class="col-md-7">
+                <h4>FRNCi</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+              </div>
+              <div class="col-md-5 mb-3">
                 <figure>
-                  <div class="gallery-img"><a href="https://j2531000.github.io/images/gallery17.jpg" title="" target="_blank"><img class="rounded" src="images/gallery17.jpg" alt=""></a></div>
+                  <div class="gallery-img">
+                    <a href="https://j2531000.github.io/images/gallery16.jpg" title="" target="_blank">
+                      <img class="rounded" src="images/gallery21.jpg" alt="">
+                    </a>
+                  </div>
                 </figure>
+              </div>
+              <div class="col-md-5 mb-3">
+                <figure>
+                  <div class="gallery-img">
+                    <a href="https://j2531000.github.io/images/gallery16.jpg" title="" target="_blank">
+                      <img class="rounded" src="images/gallery18.jpg" alt="">
+                    </a>
+                  </div>
+                </figure>
+              </div>
+              <div class="col-md-7">
+                <h4>FRNCi</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
               </div>
 
-              <div class="col-md-4 mb-3">
-                <figure>
-                  <div class="gallery-img"><a href="https://j2531000.github.io/images/gallery18.jpg" title="" target="_blank"><img class="rounded" src="images/gallery18.jpg" alt=""></a></div>
-                </figure>
-              </div>
 
-              <div class="col-md-4 mb-3">
-                <figure>
-                  <div class="gallery-img"><a href="https://j2531000.github.io/images/gallery19.jpg" title="" target="_blank"><img class="rounded" src="images/gallery19.jpg" alt=""></a></div>
-                </figure>
-              </div>
-
-              <div class="col-md-4 mb-3">
-                <figure>
-                  <div class="gallery-img"><a href="https://j2531000.github.io/images/gallery20.jpg" title="" target="_blank"><img class="rounded" src="images/gallery20.jpg" alt=""></a></div>
-                </figure>
-              </div>
-
-              <div class="col-md-4 mb-3">
-                <figure>
-                  <div class="gallery-img"><a href="https://j2531000.github.io/images/gallery21.jpg" title="" target="_blank"><img class="rounded" src="images/gallery21.jpg" alt=""></a></div>
-                </figure>
-              </div>
 
             </div>
           </div>
@@ -358,6 +390,22 @@
     each_bar_width = $(this).attr('aria-valuenow');
     $(this).width(each_bar_width + '%');
   });
+  </script>
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000); // Change image every 4 seconds
+    }
   </script>
 </body>
 </html>
