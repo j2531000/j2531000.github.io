@@ -126,6 +126,9 @@ a:hover {
 .letter-spacing-3{
     letter-spacing:3px;
 }
+.letter-spacing-5{
+    letter-spacing:5px;
+}
 
 .nav-default{
 	background-color: #fff;
@@ -257,16 +260,16 @@ a:hover {
 .grid-gallery a{
     text-decoration:none;
 }
-.gutter .grid-gallery ul {
+/*.gutter .grid-gallery ul {
     margin-left: -14px;
-}
+}*/
 /*.grid-gallery ul {
     margin-left: 1px;
 }*/
-.grid-gallery ul {
+/*.grid-gallery ul {
     list-style: none;
     padding: 0;
-}
+}*/
 .grid {
     margin: 0 auto;
 }
@@ -388,7 +391,17 @@ figure:hover img {
 .grid figure:hover .gallery-img {
     background-color: #000;
 }
+.project-number::after{
+    content: "";
+    position:absolute;
+    top:28%;
+    width: 3px;
+    height: 72px;
+    background-color: #fbd84a;
+    right: 13%;
 
+
+}
 @media (max-width: 575.98px) {
 	.navbar-brand img{
 	width: 180px;
