@@ -29,6 +29,9 @@ a:hover {
 .display-block{
     display:block;
 }
+.float-right{
+    float:right;
+}
 
 .text-black{
     color:#000;
@@ -48,7 +51,12 @@ a:hover {
 .text-light-gray{
     color:#d5d5d5;
 }
-
+.text-extremely-light-gray{
+    color:#b0b6bb;
+}
+.text-light-blue{
+    color:#71bae6
+}
 .highlight-button-default {
     border: 2px solid #f8b62c;
     background-color: #f8b62c;
@@ -201,7 +209,7 @@ a:hover {
     /* background-position: 50% 50%; */
     background-attachment: fixed;
     /*margin-top: 7%;*/
-    height:450px;
+    min-height:450px;
 }
 .dark-mask {
     background: rgba(0,0,0,0.3);
@@ -210,6 +218,7 @@ a:hover {
     padding-bottom: 5%;
     color: #fff;
     z-index: 999;
+    min-height:450px;
 }
 .profile-photo {
     width: 240px;
@@ -391,6 +400,9 @@ figure:hover img {
 .grid figure:hover .gallery-img {
     background-color: #000;
 }
+.project-number{
+    font-size:100px
+}
 .project-number::after{
     content: "";
     position:absolute;
@@ -400,16 +412,72 @@ figure:hover img {
     background-color: #fbd84a;
     right: 13%;
 
+}
+.project-name{
+    text-align:start;padding-top:6%;
+}
+.project-bg{
+    position: absolute;background-color: #fbc2c240;padding: 20% 45%;right: -6%;top: -39%;z-index: -1;
+}
+.self-intro span::after{
+    content: "/";
+    position:relative;
+    color: #71bae6;
 
 }
-@media (max-width: 575.98px) {
+.my-name{
+    font-size:4rem;font-weight:600;
+}
+.headline{
+    text-transform: uppercase;letter-spacing: 3px; font-size: 2rem;
+}
+@media (max-width: 375px) {
+    .profile-photo{
+        width:200px;
+        height:200px;
+    }
+    .profile-name{
+        width: 15rem;
+        margin-left:0;
+    }
+    .my-name{
+        font-size:2rem;
+        text-align:center;
+    }
+    .basic-info{
+        text-align:center;
+    }
+}
+@media (min-width: 376px) and (max-width: 575.98px) {
 	.navbar-brand img{
 	width: 180px;
     margin-left: 0;
 	}
+    .profile-photo{
+        width:200px;
+        height:200px;
+    }
+    .my-name{
+        font-size:2rem;
+        text-align:center;
+    }
+    .profile-name{
+        width: 15rem;   
+        margin-left:1.5rem;
+    }
+    .basic-info{
+        text-align:center;
+    }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
+    
 }
 @media (min-width: 768px) and (max-width: 991.98px){
+    .my-name {
+        font-size: 3rem;
+        padding:3% 10%;
+    }
+}
+@media (min-width: 992px) {
     
 }
